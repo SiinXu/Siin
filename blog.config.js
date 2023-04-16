@@ -1,7 +1,8 @@
 // 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/zh/features/personality
+
 const BLOG = {
   // Important page_id！！！Duplicate Template from  https://www.notion.so/tanghh/02ab3b8678004aa69e9e415905ef32a5
-  NOTION_PAGE_ID: process.env.NOTION_PAGE_ID || '274a22a31a274a49bda65273a16c44c5',
+  NOTION_PAGE_ID: process.env.NOTION_PAGE_ID || '',
   PSEUDO_STATIC: false, // 伪静态路径，开启后所有文章URL都以 .html 结尾。
   NEXT_REVALIDATE_SECOND: process.env.NEXT_PUBLIC_REVALIDATE_SECOND || 5, // 更新内容缓存间隔 单位(秒)；即每个页面有5秒的纯静态期、此期间无论多少次访问都不会抓取notion数据；调大该值有助于节省Vercel资源、同时提升访问速率，但也会使文章更新有延迟。
   THEME: process.env.NEXT_PUBLIC_THEME || 'hexo', // 主题， 支持 ['next','hexo',"fukasawa','medium','example'] @see https://preview.tangly1024.com
@@ -84,9 +85,9 @@ const BLOG = {
   PREVIEW_TAG_COUNT: 16, // 首页最多展示的标签数量，0为不限制
 
   // 鼠标点击烟花特效
-  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || false, // 开关
+  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || true, // 开关
   // 烟花色彩，感谢 https://github.com/Vixcity 提交的色彩
-  FIREWORKS_COLOR: ['255, 20, 97', '24, 255, 146', '90, 135, 255', '251, 243, 140'],
+  FIREWORKS_COLOR: ['199, 237, 9233', '175, 215, 237', '107, 194, 53', '251, 243, 140'],
 
   // 樱花飘落特效
   SAKURA: process.env.NEXT_PUBLIC_SAKURA || false, // 开关
@@ -246,7 +247,7 @@ const BLOG = {
   IMG_SHADOW: process.env.NEXT_PUBLIC_IMG_SHADOW || false, // 文章图片是否自动添加阴影
 
   // 开发相关
-  NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || '', // Useful if you prefer not to make your database public
+  NOTION_ACCESS_TOKEN: process.env.NOTION_ACCESS_TOKEN || 'v02:user_token_or_cookies:IYiCrBzjvLtUNogmpxfDWIhoXgkffBXpNhZvcRxmYv_6gpNNvlt1RjsIME6vdqSImSTnWrVCX0fNWyvDGdScVy1AO1VqoxO5ziasDzSpwkdgXYNeFiYHg-XQcjV3OLUtEaKj', // Useful if you prefer not to make your database public
   DEBUG: process.env.NEXT_PUBLIC_DEBUG || false, // 是否显示调试按钮
   ENABLE_CACHE: process.env.ENABLE_CACHE || false, // 开启缓存会将Notion数据缓存在内存中，通常在开发调试中使用，正式部署开启此功能意义不大。
   isProd: process.env.VERCEL_ENV === 'production', // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
