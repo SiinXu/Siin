@@ -1,6 +1,6 @@
 const CONFIG_HEXO = {
   HOME_BANNER_ENABLE: true,
-  HOME_BANNER_GREETINGS: ['Hi，我是Siin', 'Hi，一个普通又快乐的人', '哈哈哈哈，普乐人', '欢迎来到我的小角落🎉'], // 首页大图标语文字
+  HOME_BANNER_GREETINGS: ['你好呀，我是Siin', '一个普通又快乐的人', '欢迎来到我的小角落🎉'], // 首页大图标语文字
 
   HOME_NAV_BUTTONS: true, // 首页是否显示分类大图标按钮
   HOME_NAV_BACKGROUND_IMG_FIXED: true, // 首页背景图滚动时是否固定，true 则滚动时图片不懂； false则随鼠标滚动
@@ -13,7 +13,7 @@ const CONFIG_HEXO = {
   MENU_SEARCH: true, // 显示搜索
 
   POST_LIST_COVER: true, // 列表显示文章封面
-  POST_LIST_COVER_HOVER_ENLARGE: false, // 列表鼠标悬停放大
+  POST_LIST_COVER_HOVER_ENLARGE: true, // 列表鼠标悬停放大
 
   POST_LIST_COVER_DEFAULT: true, // 封面为空时用站点背景做默认封面
   POST_LIST_SUMMARY: true, // 文章摘要
@@ -25,7 +25,7 @@ const CONFIG_HEXO = {
   ARTICLE_RECOMMEND: true, // 文章关联推荐
 
   WIDGET_LATEST_POSTS: true, // 显示最新文章卡
-  WIDGET_ANALYTICS: false, // 显示统计卡
+  WIDGET_ANALYTICS: true, // 显示统计卡
   WIDGET_TO_TOP: true,
   WIDGET_TO_COMMENT: true, // 跳到评论区
   WIDGET_DARK_MODE: true, // 夜间模式
